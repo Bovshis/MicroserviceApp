@@ -15,7 +15,7 @@ namespace PlatformService.Data
 
         public IEnumerable<Platform> GetAll() => _db.Platforms.ToList();
 
-        public Platform Get(int id)
+        public Platform? Get(int id)
         {
             var platform = _db.Platforms.FirstOrDefault(p => p.Id == id);
             if (platform == null)
